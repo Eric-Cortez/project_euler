@@ -4,6 +4,9 @@
 
 // By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even - valued terms.
 
+// time complexity : 0(log n)
+// space complexity : 0(n)
+
 let evenFibonacci = (num1, num2, sum) => {
     if (num1 + num2 > 4000000) return sum;
 
