@@ -34,3 +34,17 @@ function sumMultiples(limit) {
 }
 
 console.log(sumMultiples(10));
+
+
+let sumMultiplesRecurs = (sum, limit, i) => {
+    if (i >= limit ) return sum; 
+
+    if(i % 3 === 0 || i % 5 === 0){
+        sum += i
+    }
+     i++
+     return sumMultiplesRecurs(sum, limit, i)
+
+}
+
+console.log(sumMultiplesRecurs(0, 10, 0))
