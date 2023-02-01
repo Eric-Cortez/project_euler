@@ -43,7 +43,7 @@ let sumMultiplesRecurs = (sum, limit, i) => {
         sum += i
     }
      i++
-     return sumMultiplesRecurs(sum, limit, i)
+    sumMultiplesRecurs(sum, limit, i)
 
 }
 
