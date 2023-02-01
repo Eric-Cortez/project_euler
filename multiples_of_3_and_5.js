@@ -8,13 +8,13 @@
 const multiples = (limit) => {
 
     let sum = 0;
-   for (let i = 0; i < limit; i++){
-     if(i % 3 === 0 || i % 5 === 0) {
-        sum += i
+    for (let i = 0; i < limit; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+            sum += i
+        }
     }
-   }
-   
-return sum;
+
+    return sum;
 
 }
 
@@ -36,15 +36,16 @@ function sumMultiples(limit) {
 console.log(sumMultiples(10));
 
 
-let sumMultiplesRecurs = (sum, limit, i) => {
-    if (i >= limit ) return sum; 
+let sumMultiplesRecurs = (limit, i = 0) => {
+    let sum = 0
+    if (i >= limit) return sum;
 
-    if(i % 3 === 0 || i % 5 === 0){
+    if (i % 3 === 0 || i % 5 === 0) {
         sum += i
     }
-     i++
-    sumMultiplesRecurs(sum, limit, i)
+    i++
+    return sum + sumMultiplesRecurs(limit, i)
 
 }
 
-console.log(sumMultiplesRecurs(0, 10, 0))
+console.log(sumMultiplesRecurs(10))
